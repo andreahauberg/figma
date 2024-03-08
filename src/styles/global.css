@@ -1,6 +1,9 @@
 
 
 :root{
+    /* width */
+    --content-width:75rem;
+
     /* color */
     --primary01: #FFCC4A;
     --primary02: #4EAF4E;
