@@ -1,0 +1,58 @@
+---
+import PillHeading from "./PillHeading.astro";
+---
+
+<section>
+  <PillHeading
+    textColor="#FFFFFF"
+    backgroundColor="#4EAF4E"
+    title="our history"
+  />
+  <p class="medium-size">Strategy for Every Stage in the Client's Journey</p>
+  <div>
+    <img class="front" src="../images/aboutthree.jpg" alt="" />
+    <img class="stars" src="../images/smallStars.svg" alt="" />
+  </div>
+</section>
+
+<style>
+  section {
+    grid-column: feature;
+    text-align: center;
+    /* background-color: var(--primary03); */
+
+    p {
+      color: var(--secondary02);
+    }
+  }
+
+  div {
+    position: relative;
+    .stars {
+      position: absolute;
+      width: 13rem;
+      height: 13rem;
+      left: -4rem;
+      top: -1rem;
+      z-index: -1;
+    }
+
+    div::before {
+      content: "";
+      position: absolute;
+      left: -1rem;
+      top: -4rem;
+      border-radius: 1.25rem;
+      background: #4eaf4e;
+      width: 10.25rem;
+      height: 11.4375rem;
+      transform: rotate(-90deg);
+      flex-shrink: 0;
+      z-index: 0;
+    }
+
+    .front {
+      z-index: 1;
+    }
+  }
+</style>
