@@ -5,6 +5,8 @@ import PillHeading from "../components/PillHeading.astro";
 import HeaderSection from "../components/HeaderSection.astro";
 import WhatToSectionSection from "../components/WhatToSection.astro";
 import StrategySection from "../components/StrategySection.astro";
+import ContactSection from "../components/ContactSection.astro";
+import FaqSection from "../components/FaqSection.astro";
 ---
 
 <MainLayout title="Service">
@@ -21,6 +23,8 @@ import StrategySection from "../components/StrategySection.astro";
   </div>
   <WhatToSectionSection />
   <StrategySection />
+  <ContactSection />
+  <FaqSection />
 </MainLayout>
 
 <style>
@@ -65,6 +69,7 @@ import StrategySection from "../components/StrategySection.astro";
       display: none;
     }
     .head-container {
+      background: none;
       grid-column: feature;
       margin-top: 0;
       padding: 0;

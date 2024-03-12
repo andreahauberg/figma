@@ -1,3 +1,7 @@
+---
+import PillHeading from "./PillHeading.astro";
+---
+
 <section>
   <div class="wrapper">
     <div class="what-to-container">
@@ -7,7 +11,8 @@
   </div>
   <div class="wrapper">
     <div class="what-to-container">
-      <h2 class="medium-size">What To Expect</h2>
+      <PillHeading title="we'll work with you" />
+      <p class="medium-size">What To Expect</p>
       <p class="small-size">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -32,6 +37,7 @@
   section {
     container: section / inline-size;
     background: var(--secondary02);
+    padding: 4rem 0;
   }
 
   .wrapper {
@@ -50,7 +56,6 @@
     display: grid;
     gap: 1rem;
     grid-column: feature;
-    margin: 2rem 0;
 
     @media (width > 900px) {
       grid-template-columns: 1fr minmax(0, 500px);

@@ -3,56 +3,96 @@ import PillHeading from "./PillHeading.astro";
 ---
 
 <section>
-  <PillHeading
-    textColor="#FFFFFF"
-    backgroundColor="#4EAF4E"
-    title="our history"
-  />
-  <p class="medium-size">Strategy for Every Stage in the Client's Journey</p>
-  <div>
-    <img class="front" src="../images/aboutthree.jpg" alt="" />
-    <img class="stars" src="../images/smallStars.svg" alt="" />
+  <div class="strategy-section">
+    <PillHeading
+      textColor="#FFFFFF"
+      backgroundColor="#4EAF4E"
+      title="our history"
+    />
+    <p class="medium-size">Strategy for Every Stage in the Client's Journey</p>
+
+    <div class="strategy-img">
+      <img class="strategy-img" src="../images/aboutthree.jpg" alt="" />
+      <img class="stars" src="../images/smallStars.svg" alt="" />
+      <img class="play" src="../icons/play_button.svg" alt="" />
+    </div>
   </div>
 </section>
 
 <style>
   section {
     grid-column: feature;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    /* background-color: var(--primary03); */
-
-    p {
+    z-index: -1;
+    background: var(--primary03);
+    padding: 3rem 0;
+    .strategy-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content:;
+      max-width: 35rem;
+    }
+    .medium-size {
       color: var(--secondary02);
+      max-width: 20ch;
+      padding: 2rem 0;
+      line-height: 1.5;
     }
   }
 
-  div {
+  .strategy-img {
     position: relative;
     .stars {
       position: absolute;
-      width: 13rem;
-      height: 13rem;
-      left: -4rem;
-      top: -1rem;
-      z-index: -1;
+      width: 12rem;
+      height: 12rem;
+      left: -3rem;
+      top: -2.5rem;
+      z-index: -2;
     }
 
-    div::before {
+    &::before {
       content: "";
       position: absolute;
       left: -1rem;
-      top: -4rem;
+      top: -2rem;
       border-radius: 1.25rem;
-      background: #4eaf4e;
+      background: var(--primary02);
+      width: 6.75rem;
+      height: 7.5625rem;
+      transform: rotate(-90deg);
+      flex-shrink: 0;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -2rem;
+      bottom: -2rem;
+      border-radius: 1.25rem;
+      background: var(--primary01);
       width: 10.25rem;
       height: 11.4375rem;
       transform: rotate(-90deg);
       flex-shrink: 0;
-      z-index: 0;
+      z-index: -1;
     }
 
-    .front {
-      z-index: 1;
+    .play {
+      max-width: 6rem;
+      position: absolute;
+      right: 40%;
+      bottom: 20%;
+    }
+
+    .strategy-img {
+      border-radius: 1.75rem;
+      filter: brightness(80%);
     }
   }
 </style>
