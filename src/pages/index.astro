@@ -1,8 +1,63 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import ScrollingContainer from "../components/ScrollingContainer.astro";
+import PillHeading from "../components/PillHeading.astro";
+import OurVisionSection from "../components/OurVisionSection.astro";
+import NumbersSection from "../components/NumbersSection.astro";
 ---
 
-<MainLayout title="About" />
+<MainLayout title="About">
+  <figure class="full"><img src="../images/aboutheading.jpg" alt="" /></figure>
+  <div class="head-container">
+    <PillHeading title="services" />
+    <p>Creative Services For Boost Your Business Growth</p>
+  </div>
+  <OurVisionSection />
+  <NumbersSection />
+</MainLayout>
 
-<style></style>
+<style>
+  .container {
+    grid-column: feature;
+  }
+  .full {
+    grid-column: full;
+  }
+  .head-container {
+    grid-column: feature;
+    margin-top: max(-35%, 50% - 80%);
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+    padding: max(3rem);
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+    border-radius: 1.8125rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5.5px);
+    max-width: 50ch;
+    p {
+      color: var(--primary03);
+      font-size: var(--heading01);
+      font-family: cabin;
+      font-style: normal;
+      font-weight: var(--thick);
+      line-height: var(--heading-large-line-heigh);
+      max-width: 40ch;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    img {
+      display: none;
+    }
+    .head-container {
+      background: none;
+      grid-column: feature;
+      margin-top: 0;
+      padding: 0;
+      padding-top: 2rem;
+    }
+  }
+</style>
