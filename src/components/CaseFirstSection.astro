@@ -3,7 +3,9 @@ import Button from "./Button.astro";
 ---
 
 <section>
-  <img src="../images/casetwo.jpg" alt="" />
+  <div class="image-container">
+    <img src="../images/casetwo.jpg" alt="" />
+  </div>
   <div class="content">
     <dl>
       <div>
@@ -33,46 +35,75 @@ import Button from "./Button.astro";
   section {
     grid-column: feature;
     margin-top: 6rem;
+  }
 
-    .content {
+  .image-container {
+    position: relative;
+    border-radius: 1.75rem;
+    overflow: hidden;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1.75rem;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: var(--primary03);
+    padding: 2rem 1rem;
+    justify-content: space-evenly;
+    border-radius: 1.875rem;
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    margin: -4rem auto;
+  }
+
+  dl {
+    grid-column: feature;
+    justify-content: center;
+
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 3rem;
+
+    > * {
       display: flex;
-      gap: 5rem;
-      background: var(--primary03);
-      padding: 3rem 2rem;
-      justify-content: center;
-      border-radius: 1.875rem;
-    }
+      flex-direction: column-reverse;
+      font-size: var(--paragraph-text);
+      font-weight: var(--normal);
+      line-height: var(--default-line-height);
+      color: var(--secondary02);
+      font-family: "lato", sans-serif;
+      font-style: normal;
 
-    img {
-      border-radius: 1.75rem;
-    }
-    dl {
-      grid-column: feature;
-      justify-content: center;
-      z-index: 1;
-
-      display: flex;
-      gap: 3rem;
-
-      > * {
-        display: flex;
-        flex-direction: column-reverse;
-        font-size: var(--paragraph-text);
-        font-weight: var(--normal);
+      :last-child {
+        font-size: var(--heading02);
+        font-weight: var(--thick);
         line-height: var(--default-line-height);
         color: var(--secondary02);
-        font-family: "lato", sans-serif;
+        font-family: cabin;
         font-style: normal;
-
-        :last-child {
-          font-size: var(--heading02);
-          font-weight: var(--thick);
-          line-height: var(--default-line-height);
-          color: var(--secondary02);
-          font-family: cabin;
-          font-style: normal;
-        }
       }
+    }
+  }
+  @media screen and (max-width: 700px) {
+    img {
+      display: none;
+    }
+
+    .content {
+      width: 100%;
+      margin: -3rem auto;
+    }
+
+    dl {
+      align-items: start;
     }
   }
 </style>
