@@ -48,4 +48,17 @@ import CaseFirstSection from "../components/CaseFirstSection.astro";
       max-width: 40ch;
     }
   }
+
+  @media screen and (max-width: 700px) {
+    img {
+      display: none;
+    }
+    .head-container {
+      background: none;
+      grid-column: feature;
+      margin-top: 0;
+      padding: 0;
+      padding-top: 2rem;
+    }
+  }
 </style>
