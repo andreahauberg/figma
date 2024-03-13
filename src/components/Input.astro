@@ -1,0 +1,47 @@
+---
+import Button from "./Button.astro";
+---
+
+<form action="/submit_email.php" method="post">
+  <div>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Your email address"
+      required
+    />
+  </div>
+  <div>
+    <Button title="Send Message" backgroundColor="#4EAF4E" />
+  </div>
+</form>
+
+<style>
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 1rem 0;
+  }
+
+  input {
+    display: flex;
+    width: 18rem;
+    padding: 1rem 0.9rem;
+    align-items: flex-start;
+    border: 1px solid #c1c1c1;
+    border-radius: 2.625rem;
+    background: var(--secondary02);
+    color: #a9a9a9;
+    font-family: "Lato";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    outline: none;
+  }
+
+  div {
+    display: flex;
+  }
+</style>

@@ -1,0 +1,37 @@
+---
+import Button from "./Button.astro";
+---
+
+<header>
+  <div>
+    <p class="medium-size">Meet Our Great Team</p>
+    <p class="small-size">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam,
+      quis nostrud exercitation.
+    </p>
+  </div>
+  <Button title="Join our team" />
+</header>
+
+<style>
+  header {
+    grid-column: feature;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-block-start: 4rem;
+    margin-bottom: 1rem;
+
+    .medium-size {
+      padding: 1rem 0;
+
+      max-width: 26rem;
+    }
+  }
+
+  p:nth-last-of-type(1) {
+    margin-bottom: 2rem;
+  }
+</style>
