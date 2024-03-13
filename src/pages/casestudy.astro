@@ -1,5 +1,51 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import PillHeading from "../components/PillHeading.astro";
+import CaseFirstSection from "../components/CaseFirstSection.astro";
 ---
 
-<MainLayout title="Case Study Single" />
+<MainLayout title="Case Study Single">
+  <figure class="full"><img src="../images/caseone.jpg" alt="" /></figure>
+  <div class="head-container">
+    <PillHeading title="Case Studies single" />
+    <p>Taxes & Efficiency</p>
+  </div>
+  <CaseFirstSection />
+</MainLayout>
+
+<style>
+  .container {
+    grid-column: feature;
+  }
+  .full {
+    grid-column: full;
+  }
+  .scroll {
+    grid-column: feature/-1;
+  }
+  .head-container {
+    grid-column: feature;
+    margin-top: max(-35%, 50% - 80%);
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+    padding: max(3rem);
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+    border-radius: 1.8125rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5.5px);
+    max-width: 50ch;
+    p {
+      color: var(--primary03);
+      font-size: var(--heading01);
+      font-family: cabin;
+      font-style: normal;
+      font-weight: var(--thick);
+      line-height: var(--heading-large-line-heigh);
+      max-width: 40ch;
+    }
+  }
+</style>

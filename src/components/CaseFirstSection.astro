@@ -1,0 +1,78 @@
+---
+import Button from "./Button.astro";
+---
+
+<section>
+  <img src="../images/casetwo.jpg" alt="" />
+  <div class="content">
+    <dl>
+      <div>
+        <dt>Taxes & Efficiency</dt>
+        <dd>Case Name</dd>
+      </div>
+      <div>
+        <dt>Business</dt>
+        <dd>Category</dd>
+      </div>
+      <div>
+        <dt>27th September 2022</dt>
+        <dd>Date</dd>
+      </div>
+    </dl>
+    <div>
+      <Button
+        title="Live Preview"
+        textColor="#181818"
+        backgroundColor="#FFCC4A"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    grid-column: feature;
+    margin-top: 6rem;
+
+    .content {
+      display: flex;
+      gap: 5rem;
+      background: var(--primary03);
+      padding: 3rem 2rem;
+      justify-content: center;
+      border-radius: 1.875rem;
+    }
+
+    img {
+      border-radius: 1.75rem;
+    }
+    dl {
+      grid-column: feature;
+      justify-content: center;
+      z-index: 1;
+
+      display: flex;
+      gap: 3rem;
+
+      > * {
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: var(--paragraph-text);
+        font-weight: var(--normal);
+        line-height: var(--default-line-height);
+        color: var(--secondary02);
+        font-family: "lato", sans-serif;
+        font-style: normal;
+
+        :last-child {
+          font-size: var(--heading02);
+          font-weight: var(--thick);
+          line-height: var(--default-line-height);
+          color: var(--secondary02);
+          font-family: cabin;
+          font-style: normal;
+        }
+      }
+    }
+  }
+</style>
