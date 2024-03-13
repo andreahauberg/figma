@@ -1,0 +1,126 @@
+---
+import ReadMore from "./ReadMore.astro";
+---
+
+<div class="container">
+  <section class="full">
+    <ul role="list">
+      <li>
+        <figure class="card-heading">
+          <img class="small-icon" src="../icons/stack.svg" alt="" />
+          <p class="normal-size">Creative Ideas</p>
+        </figure>
+        <p class="small-size">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
+          accumsan augue Donec aliquam.
+        </p>
+        <ReadMore />
+      </li>
+
+      <li>
+        <figure class="card-heading">
+          <img class="small-icon" src="../icons/graph.svg" alt="" />
+          <p class="normal-size">Best Features</p>
+        </figure>
+        <p class="small-size">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <ReadMore />
+      </li>
+
+      <li>
+        <figure class="card-heading">
+          <img class="small-icon" src="../icons/globe.svg" alt="" />
+          <p class="normal-size">Experience</p>
+        </figure>
+        <p class="small-size">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
+          accumsan augue Donec aliquam.
+        </p>
+        <ReadMore />
+      </li>
+
+      <li>
+        <figure class="card-heading">
+          <img class="small-icon" src="../icons/setting.svg" alt="" />
+          <p class="normal-size">Easy Solutions</p>
+        </figure>
+        <p class="small-size">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <ReadMore />
+      </li>
+    </ul>
+  </section>
+</div>
+
+<style>
+  .container {
+    background: var(--secondary01);
+    z-index: -1;
+    padding-block: 1rem;
+    padding-left: 1rem;
+    display: grid;
+    grid:
+      auto /
+      [full-start]
+      1fr
+      [content]
+      minmax(0, var(--content-width))
+      1fr
+      [full-end];
+    column-gap: 1rem;
+
+    > * {
+      grid-column: 2;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+      display: grid;
+      grid: auto / subgrid;
+      row-gap: 3rem;
+
+      > * {
+        grid-column: 2;
+      }
+
+      > ul {
+        scroll-snap-type: x mandatory;
+        grid-column: 1 / -1;
+        padding-block-end: 1rem;
+
+        li {
+          scroll-snap-align: center;
+        }
+      }
+    }
+
+    .small-icon {
+      width: 2.125rem;
+      height: 1.625rem;
+    }
+
+    .card-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+
+    li {
+      flex-basis: min(220px, 90%);
+      flex-shrink: 0;
+      background: var(--secondary02);
+      border-radius: 8px;
+      padding: 3rem 1rem;
+      align-self: start;
+    }
+  }
+</style>

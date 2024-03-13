@@ -42,6 +42,10 @@ import PillHeading from "./PillHeading.astro";
     container: section / inline-size;
     background: var(--secondary02);
     padding: 4rem 0;
+
+    .medium-size {
+      padding-top: 1rem;
+    }
   }
 
   .wrapper {
@@ -60,8 +64,6 @@ import PillHeading from "./PillHeading.astro";
     display: grid;
     gap: 4rem;
     grid-column: feature;
-
-    /*  */
 
     @media (width > 900px) {
       grid-template-columns: 1fr minmax(0, 400px);

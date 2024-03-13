@@ -1,0 +1,38 @@
+---
+import PillHeading from "./PillHeading.astro";
+import ReadMore from "./ReadMore.astro";
+import Button from "./Button.astro";
+---
+
+<header>
+  <div>
+    <PillHeading title="Growing with our Clients" />
+    <p class="medium-size">Our core values & principles</p>
+    <p class="small-size">
+      Capitalize on low hanging fruit to identify a ballpark value added
+      activity beta test. Override the digital divide with additional from
+      DevOps.
+    </p>
+  </div>
+  <Button title="Get in touch" />
+</header>
+
+<style>
+  header {
+    grid-column: feature;
+    background: var(--secondary01);
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-block-start: 4rem;
+
+    .medium-size {
+      padding-top: 1rem;
+    }
+  }
+
+  p:nth-last-of-type(1) {
+    margin-bottom: 2rem;
+  }
+</style>

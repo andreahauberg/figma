@@ -3,6 +3,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 import PillHeading from "../components/PillHeading.astro";
 import OurVisionSection from "../components/OurVisionSection.astro";
 import NumbersSection from "../components/NumbersSection.astro";
+import ValuesSection from "../components/ValuesSection.astro";
+import ValueScroll from "../components/ValueScroll.astro";
+import UserExperience from "../components/UserExperience.astro";
 ---
 
 <MainLayout title="About">
@@ -13,6 +16,11 @@ import NumbersSection from "../components/NumbersSection.astro";
   </div>
   <OurVisionSection />
   <NumbersSection />
+  <ValuesSection />
+  <div class="scroll">
+    <ValueScroll />
+  </div>
+  <UserExperience />
 </MainLayout>
 
 <style>
@@ -21,6 +29,9 @@ import NumbersSection from "../components/NumbersSection.astro";
   }
   .full {
     grid-column: full;
+  }
+  .scroll {
+    grid-column: feature/-1;
   }
   .head-container {
     grid-column: feature;

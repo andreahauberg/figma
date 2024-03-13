@@ -9,10 +9,14 @@ import PillHeading from "./PillHeading.astro";
       backgroundColor="#4EAF4E"
       title="our history"
     />
-    <p class="medium-size">Strategy for Every Stage in the Client's Journey</p>
-
+    <p class="medium-size">Better Website Means A User Experience</p>
+    <p class="small-size">
+      Ippsum is the result of synergy between our teams and our customers. Our
+      company culture is focused on excellent productivity, customer
+      satisfaction, respect for team and individual achievements.
+    </p>
     <div class="strategy-img">
-      <img class="strategy-img" src="../images/aboutthree.jpg" alt="" />
+      <img class="strategy-img" src="../images/valueone.jpg" alt="" />
       <img class="stars" src="../images/smallStars.svg" alt="" />
       <img class="play" src="../icons/play_button.svg" alt="" />
     </div>
@@ -27,20 +31,23 @@ import PillHeading from "./PillHeading.astro";
     justify-content: center;
     text-align: center;
     z-index: -1;
-    background: var(--primary03);
     padding: 3rem 0;
     .strategy-section {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content:;
-      max-width: 35rem;
+      max-width: 45rem;
     }
     .medium-size {
-      color: var(--secondary02);
       max-width: 20ch;
-      padding: 2rem 0;
       line-height: 1.5;
+      padding-top: 1rem;
+    }
+
+    .small-size {
+      max-width: 90ch;
+      padding: 0.3rem 0rem 3rem 0rem;
     }
   }
 
@@ -50,7 +57,7 @@ import PillHeading from "./PillHeading.astro";
       position: absolute;
       width: 12rem;
       height: 12rem;
-      left: -3rem;
+      right: -3rem;
       top: -2.5rem;
       z-index: -2;
     }
@@ -59,7 +66,7 @@ import PillHeading from "./PillHeading.astro";
       content: "";
       position: absolute;
       left: -1rem;
-      top: -2rem;
+      bottom: -2rem;
       border-radius: 1.25rem;
       background: var(--primary02);
       width: 6.75rem;
@@ -68,21 +75,6 @@ import PillHeading from "./PillHeading.astro";
       flex-shrink: 0;
       z-index: -1;
     }
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: -2rem;
-      bottom: -2rem;
-      border-radius: 1.25rem;
-      background: var(--primary01);
-      width: 10.25rem;
-      height: 11.4375rem;
-      transform: rotate(-90deg);
-      flex-shrink: 0;
-      z-index: -1;
-    }
-
     .play {
       max-width: 15%;
       position: absolute;
