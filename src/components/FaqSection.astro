@@ -1,7 +1,7 @@
 ---
 import PillHeading from "./PillHeading.astro";
 
-// import Faq from "../components/Faq.astro";
+import Faq from "../components/Faq.astro";
 ---
 
 <section>
@@ -9,90 +9,42 @@ import PillHeading from "./PillHeading.astro";
     <PillHeading textColor="#FFFFFF" backgroundColor="#4EAF4E" title="faq" />
     <p class="medium-size">Customer Questions</p>
     <div class="faq-inner">
-      <div class="faq-item">
-        <input type="checkbox" class="faq-toggle" id="faq-toggle-1" />
-        <label class="faq-question" for="faq-toggle-1"
-          >What will happen when I’ve sent my application?</label
-        >
-        <div class="faq-answer">
-          <p class="small-size">
-            Ippsum is the result of synergy between our teams and our customers.
-            Our company culture is focused on excellent productivity, customer
-            satisfaction, respect for team and individual achievements.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <input type="checkbox" class="faq-toggle" id="faq-toggle-2" />
-        <label class="faq-question" for="faq-toggle-2"
-          >Can I get a free trial before I purchase?</label
-        >
-        <div class="faq-answer">
-          <p class="small-size">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            quisquam, non cumque, quo obcaecati accusamus architecto explicabo
-            libero placeat reiciendis voluptatibus repellat quod, ratione ab
-            voluptas dicta commodi possimus accusantium!
-          </p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <input type="checkbox" class="faq-toggle" id="faq-toggle-3" />
-        <label class="faq-question" for="faq-toggle-3"
-          >What should I include in my personal statement?</label
-        >
-        <div class="faq-answer">
-          <p class="small-size">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            quisquam, non cumque, quo obcaecati accusamus architecto explicabo
-            libero placeat reiciendis voluptatibus repellat quod, ratione ab
-            voluptas dicta commodi possimus accusantium!
-          </p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <input type="checkbox" class="faq-toggle" id="faq-toggle-4" />
-        <label class="faq-question" for="faq-toggle-4"
-          >Will membership plans be charged automatically?</label
-        >
-        <div class="faq-answer">
-          <p class="small-size">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            quisquam, non cumque, quo obcaecati accusamus architecto explicabo
-            libero placeat reiciendis voluptatibus repellat quod, ratione ab
-            voluptas dicta commodi possimus accusantium!
-          </p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <input type="checkbox" class="faq-toggle" id="faq-toggle-5" />
-        <label class="faq-question" for="faq-toggle-5"
-          >What will happen when I’ve sent my application?</label
-        >
-        <div class="faq-answer">
-          <p class="small-size">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            quisquam, non cumque, quo obcaecati accusamus architecto explicabo
-            libero placeat reiciendis voluptatibus repellat quod, ratione ab
-            voluptas dicta commodi possimus accusantium!
-          </p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <input type="checkbox" class="faq-toggle" id="faq-toggle-6" />
-        <label class="faq-question" for="faq-toggle-6"
-          >Can I get a free trial before I purchase?</label
-        >
-        <div class="faq-answer">
-          <p class="small-size">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            quisquam, non cumque, quo obcaecati accusamus architecto explicabo
-            libero placeat reiciendis voluptatibus repellat quod, ratione ab
-            voluptas dicta commodi possimus accusantium!
-          </p>
-        </div>
-      </div>
+      <Faq
+        title="What will happen when I’ve sent my application?"
+        data="faq-toggle-1"
+        id="faq-toggle-1"
+        body="Ippsum is the result of synergy between our teams"
+      />
+      <Faq
+        title="Can I get a free trial before I purchase?"
+        data="faq-toggle-2"
+        id="faq-toggle-2"
+        body="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+      />
+      <Faq
+        title="What should I include in my personal statement?"
+        data="faq-toggle-3"
+        id="faq-toggle-3"
+        body="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+      />
+      <Faq
+        title="Will membership plans be charged automatically?"
+        data="faq-toggle-4"
+        id="faq-toggle-4"
+        body="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+      />
+      <Faq
+        title="What will happen when I’ve sent my application?"
+        data="faq-toggle-5"
+        id="faq-toggle-5"
+        body="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+      />
+      <Faq
+        title="Can I get a free trial before I purchase?"
+        data="faq-toggle-6"
+        id="faq-toggle-6"
+        body="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+      />
     </div>
   </div>
 </section>
@@ -117,57 +69,9 @@ import PillHeading from "./PillHeading.astro";
       padding-top: 2rem;
     }
 
-    p {
-      max-width: 60ch;
-    }
-
     .medium-size {
       padding-top: 1rem;
-    }
-
-    .faq-item {
-      margin-bottom: 20px;
-    }
-    .faq-question {
-      cursor: pointer;
-      font-weight: bold;
-      border: none;
-      background: none;
-      outline: none;
-      padding: 0;
-      margin: 0;
-      width: 100%;
-      text-align: left;
-    }
-    .faq-answer {
-      display: none;
-      margin-top: 10px;
-    }
-    .faq-answer p {
-      margin: 0;
-    }
-    .faq-toggle {
-      display: none;
-    }
-    .faq-toggle + label {
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-    }
-    .faq-toggle + label:after {
-      content: url("../icons/plus.svg");
-      padding-left: 110px;
-    }
-    .faq-toggle:checked + label:after {
-      content: url("../icons/minus.svg");
-    }
-    .faq-toggle:checked ~ .faq-answer {
-      display: block;
-    }
-
-    .faq-item:not(:last-child) {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 20px;
+      max-width: 60ch;
     }
   }
 </style>
