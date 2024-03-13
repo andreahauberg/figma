@@ -5,7 +5,7 @@ const { title, textColor, backgroundColor } = Astro.props;
 <div
   style={{
     color: textColor,
-    background: backgroundColor
+    background: backgroundColor,
   }}
 >
   {title}
@@ -16,19 +16,18 @@ const { title, textColor, backgroundColor } = Astro.props;
     display: inline-flex;
     height: fit-content;
     width: fit-content;
-    padding: 0rem 0.9375rem;
+    padding: 0.25rem 1.3125rem;
     align-items: flex-start;
     gap: 0.625rem;
     border-radius: var(--heading-small-radius);
     background: var(--primary01);
     color: #181818;
 
-    font-family: Lato;
+    font-family: cabin;
     font-size: var(--paragraph-text);
     font-style: normal;
     font-weight: var(--normal);
     line-height: var(--default-line-height);
     letter-spacing: 0.145rem;
-    text-transform: uppercase;
   }
 </style>

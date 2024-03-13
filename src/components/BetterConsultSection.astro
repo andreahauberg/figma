@@ -1,0 +1,152 @@
+---
+import PillHeading from "./PillHeading.astro";
+---
+
+<section>
+  <div class="wrapper">
+    <div class="what-to-container">
+      <PillHeading
+        textColor="#FFFFFF"
+        backgroundColor="#4EAF4E"
+        title="book now"
+      />
+      <p class="medium-size">
+        Better Consult, <span class="highlighted-text">Better</span> Results
+      </p>
+      <p class="small-size">
+        Our software development agency has a growth up to 30% per each year. If
+        you are result-oriented, not afraid to take initiative – drop us a note
+        and join our team!
+      </p>
+      <div class="call-btn">
+        <button class="small-size"
+          ><img class="phone" src="../icons/phone.svg" alt="" /> +800 1234 654</button
+        >
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="what-to-container">
+      <div class="our">
+        <img src="../images/consultone.jpg" alt="" />
+        <img class="consult" src="../images/consult.jpg" alt="" />
+      </div>
+      <img class="stars" src="../images/smallStars.svg" alt="" />
+    </div>
+  </div>
+</section>
+<style>
+  section {
+    container: section / inline-size;
+    background: var(--primary03);
+    border-radius: 1.875rem;
+    padding: 5rem 5rem 0rem 4rem;
+    margin: 4rem 0;
+
+    .medium-size {
+      color: var(--secondary01);
+      max-width: 15ch;
+      padding: 1rem 0;
+    }
+    .highlighted-text {
+      color: #727272;
+    }
+
+    .small-size {
+      color: var(--secondary01);
+    }
+  }
+
+  .wrapper {
+    container: what-to-container / inline-size;
+  }
+
+  .what-to-container:has(img) {
+    display: grid;
+    gap: 1rem;
+
+    @container what-to-container (width > 500px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  section {
+    display: grid;
+    gap: 4.6rem;
+    grid-column: feature;
+
+    @media (width > 900px) {
+      grid-template-columns: 1fr minmax(0, 400px);
+    }
+
+    .what-to-container {
+      margin-inline: auto;
+      display: block;
+      position: relative;
+
+      .stars {
+        position: absolute;
+        width: 15rem;
+        height: 15rem;
+        left: -4rem;
+        top: -3rem;
+        z-index: -2;
+      }
+    }
+    .our:has(img)::before {
+      content: "";
+      position: absolute;
+      left: -2rem;
+      top: -2rem;
+      border-radius: 1.25rem;
+      background: #4eaf4e;
+      width: 10.25rem;
+      height: 11.4375rem;
+      transform: rotate(-90deg);
+      flex-shrink: 0;
+      z-index: -1;
+    }
+
+    .our:has(img)::after {
+      content: "";
+      position: absolute;
+      right: -2rem;
+      top: -5rem;
+      border-radius: 0 0 1.75rem 1.75rem;
+      background: url("../images/consulttwo.jpg") var(--primary01) 50% / cover
+        no-repeat;
+      background-blend-mode: multiply;
+      width: 12.09075rem;
+      height: 18.13338rem;
+      flex-shrink: 0;
+      z-index: -1;
+    }
+
+    .vision-img {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    img:not(.stars, .consult, .phone) {
+      border-radius: 1.75rem 1.75rem 0 0;
+    }
+  }
+
+  .call-btn {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    button {
+      gap: 0.625rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      border-radius: 2.625rem;
+      padding: 1rem 1.3125rem;
+      background: var(--primary01);
+      color: var(--primary03);
+    }
+    img {
+      width: 1.35056rem;
+      height: 1.35056rem;
+    }
+  }
+</style>

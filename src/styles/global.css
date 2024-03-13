@@ -70,7 +70,7 @@ body{
 .medium-size{
     font-size: var(--heading02);
     font-weight: var(--thick);
-    line-height: var(--heading-small-line-height);
+    line-height: var(--default-line-height);
     color: var(--primary03);
     font-family: cabin;
     font-style: normal;

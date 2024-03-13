@@ -6,6 +6,9 @@ import NumbersSection from "../components/NumbersSection.astro";
 import ValuesSection from "../components/ValuesSection.astro";
 import ValueScroll from "../components/ValueScroll.astro";
 import UserExperience from "../components/UserExperience.astro";
+import ChampionSection from "../components/ChampionSection.astro";
+import ChampionTeam from "../components/ChampionTeam.astro";
+import BetterConsultSection from "../components/BetterConsultSection.astro";
 ---
 
 <MainLayout title="About">
@@ -21,6 +24,11 @@ import UserExperience from "../components/UserExperience.astro";
     <ValueScroll />
   </div>
   <UserExperience />
+  <ChampionSection />
+  <div class="scroll">
+    <ChampionTeam />
+  </div>
+  <BetterConsultSection />
 </MainLayout>
 
 <style>

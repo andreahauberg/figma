@@ -1,0 +1,36 @@
+---
+import PillHeading from "../components/PillHeading.astro";
+---
+
+<header>
+  <div>
+    <PillHeading title="our team" />
+    <p class="medium-size">We champion the bold to achieve the extraordinary</p>
+    <p class="small-size">
+      Ippsum is the result of synergy between our teams and our customers. Our
+      company culture is focused on excellent productivity, customer
+      satisfaction, respect for team.
+    </p>
+  </div>
+</header>
+
+<style>
+  header {
+    grid-column: feature;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-block-start: 4rem;
+
+    .medium-size {
+      padding: 1rem 0;
+
+      max-width: 26rem;
+    }
+  }
+
+  p:nth-last-of-type(1) {
+    margin-bottom: 2rem;
+  }
+</style>
