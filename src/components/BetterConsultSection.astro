@@ -40,13 +40,13 @@ import PillHeading from "./PillHeading.astro";
     container: section / inline-size;
     background: var(--primary03);
     border-radius: 1.875rem;
-    padding: 5rem 5rem 0rem 4rem;
-    margin: 4rem 0;
+    padding: 5rem 2rem 0rem 2rem;
+    margin: 8rem 0;
+    overflow: hidden;
 
     .medium-size {
       color: var(--secondary01);
       max-width: 15ch;
-      padding: 1rem 0;
     }
     .highlighted-text {
       color: #727272;
@@ -54,6 +54,10 @@ import PillHeading from "./PillHeading.astro";
 
     .small-size {
       color: var(--secondary01);
+    }
+
+    @media (width < 700px) {
+      padding: 2rem 2rem 0rem 2rem;
     }
   }
 
@@ -143,6 +147,14 @@ import PillHeading from "./PillHeading.astro";
       padding: 1rem 1.3125rem;
       background: var(--primary01);
       color: var(--primary03);
+
+      border: 2px solid var(--primary01);
+    }
+
+    button:hover {
+      background: var(--primary03);
+      color: var(--secondary02);
+      border: 2px solid var(--secondary02);
     }
     img {
       width: 1.35056rem;

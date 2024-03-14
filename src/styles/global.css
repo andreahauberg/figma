@@ -30,7 +30,7 @@
     --heading-large-line-height:3.62;
     --heading-medium-line-height:3.26;
     --heading-small-line-height:1.9;
-    --list-line-height:2.145;
+    --list-line-height:2.4;
     --quote-line-height:1.40;
 
     /* border-radius */
@@ -75,6 +75,7 @@ body{
     font-family: cabin;
     font-style: normal;
     margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 
   .normal-size{

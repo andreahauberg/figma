@@ -44,10 +44,13 @@ import Button from "./Button.astro";
     container: section / inline-size;
     background: var(--primary03);
     border-radius: 1.875rem;
-    padding: 0rem 2rem 2rem 2rem;
+    padding: 0rem 3rem 3rem 3rem;
     margin: 4rem 0;
     overflow: hidden;
 
+    @media (width < 550px) {
+      padding: 0rem 2rem 2rem 2rem;
+    }
     .pill {
       padding-top: 2rem;
     }
@@ -55,7 +58,6 @@ import Button from "./Button.astro";
     .medium-size {
       color: var(--secondary01);
       max-width: 15ch;
-      padding: 1rem 0;
     }
     .highlighted-text {
       color: #727272;
@@ -63,6 +65,7 @@ import Button from "./Button.astro";
 
     .small-size {
       color: var(--secondary01);
+      padding-bottom: 1rem;
     }
   }
 
@@ -102,7 +105,7 @@ import Button from "./Button.astro";
       }
 
       .hands {
-        margin-right: -2rem;
+        margin-right: -3rem;
       }
     }
   }
@@ -113,7 +116,7 @@ import Button from "./Button.astro";
     justify-content: center;
     gap: 0.625rem;
 
-    @media (width < 500px) {
+    @media (width < 600px) {
       flex-wrap: wrap;
     }
   }

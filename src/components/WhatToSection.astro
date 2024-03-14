@@ -37,7 +37,10 @@ import PillHeading from "./PillHeading.astro";
   section {
     container: section / inline-size;
     background: var(--secondary02);
-    padding: 4rem 0;
+    padding-bottom: 4rem;
+    @media (width < 900px) {
+      padding-top: 0;
+    }
   }
 
   .wrapper {
@@ -54,7 +57,7 @@ import PillHeading from "./PillHeading.astro";
   }
   section {
     display: grid;
-    gap: 1rem;
+    gap: 4rem;
     grid-column: feature;
 
     @media (width > 900px) {
@@ -87,9 +90,6 @@ import PillHeading from "./PillHeading.astro";
       transform: rotate(-90deg);
       flex-shrink: 0;
       z-index: -1;
-    }
-    img {
-      max-width: 400px;
     }
   }
   ul {

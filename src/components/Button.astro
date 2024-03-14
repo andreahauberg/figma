@@ -3,10 +3,7 @@ const { title, textColor, backgroundColor } = Astro.props;
 ---
 
 <div>
-  <button
-    class="small-size"
-    style={{ color: textColor, background: backgroundColor }}>{title}</button
-  >
+  <button class="small-size">{title}</button>
 </div>
 <style>
   div {
@@ -20,8 +17,15 @@ const { title, textColor, backgroundColor } = Astro.props;
     flex-shrink: 0;
 
     border-radius: 2.625rem;
-    background: var(--primary03);
+    background: var(--primary01);
 
+    border: 2px solid var(--primary01);
+    color: var(--secondary03);
+  }
+
+  button:hover {
+    background: var(--primary03);
     color: var(--secondary02);
+    border: 2px solid var(--secondary02);
   }
 </style>
