@@ -1,6 +1,7 @@
 ---
 import PillHeading from "./PillHeading.astro";
 import Input from "./Input.astro";
+import Button from "./Button.astro";
 ---
 
 <section>
@@ -19,7 +20,14 @@ import Input from "./Input.astro";
         placerat duis ultricies lacus sed turpis. Pellentesque pellentesque
         habitant morbi tristique.
       </p>
-      <Input />
+      <div class="input">
+        <Input />
+        <Button
+          title="Subscribe"
+          backgroundColor="#FFCC4A"
+          textColor="#181818"
+        />
+      </div>
     </div>
   </div>
   <div class="wrapper">
@@ -36,8 +44,9 @@ import Input from "./Input.astro";
     container: section / inline-size;
     background: var(--primary03);
     border-radius: 1.875rem;
-    padding: 0rem 0rem 0rem 4rem;
+    padding: 0rem 2rem 2rem 2rem;
     margin: 4rem 0;
+    overflow: hidden;
 
     .pill {
       padding-top: 2rem;
@@ -93,35 +102,19 @@ import Input from "./Input.astro";
       }
 
       .hands {
-        margin: 0;
+        margin-right: -2rem;
       }
-    }
-    .vision-img {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
-    img:not(.stars, .consult, .phone) {
-      border-radius: 1.75rem 1.75rem 0 0;
     }
   }
 
-  .call-btn {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    button {
-      gap: 0.625rem;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      border-radius: 2.625rem;
-      padding: 1rem 1.3125rem;
-      background: var(--primary01);
-      color: var(--primary03);
-    }
-    img {
-      width: 1.35056rem;
-      height: 1.35056rem;
+  .input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+
+    @media (width < 500px) {
+      flex-wrap: wrap;
     }
   }
 </style>

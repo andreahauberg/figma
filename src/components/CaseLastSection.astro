@@ -1,0 +1,52 @@
+---
+import Button from "./Button.astro";
+---
+
+<section>
+  <p class="normal-size">More case studies</p>
+
+  <div class="images">
+    <img src="../images/casefour.jpg" alt="" />
+    <img src="../images/casefive.jpg" alt="" />
+    <img src="../images/casesix.jpg" alt="" />
+  </div>
+  <div class="button">
+    <Button title="Browse all case studies" />
+  </div>
+</section>
+
+<style>
+  section {
+    grid-column: feature;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+
+    .images {
+      display: flex;
+      gap: 1rem;
+      background: #d9d9d9;
+      padding: 2.5rem 1.5rem;
+
+      img {
+        border-radius: 1.75rem;
+        max-width: fit-content;
+      }
+      img:first-child {
+        @media (width < 900px) {
+          display: none;
+        }
+      }
+      img:last-child {
+        @media (width < 800px) {
+          display: none;
+        }
+      }
+    }
+
+    .button {
+      margin-top: 3rem;
+    }
+  }
+</style>
