@@ -1,66 +1,48 @@
 ---
-import SocialsIcon from "../components/SocialsIcon.astro";
 import PillLabel from "../components/PillLabel.astro";
+import Card from "../components/Card.astro";
+import ChampionTeam from "./ChampionTeam.astro";
 ---
 
+<ChampionTeam />
 <div class="container">
   <section class="full">
     <ul role="list">
       <li>
-        <figure class="card-heading">
-          <img src="../images/teamfour.jpg" alt="" />
+        <div class="card-heading">
+          <Card
+            title="Maya Elizabeth"
+            imgPath="../images/teamfour.jpg"
+            body="Leverage agile frameworks to provide a robust synopsis for high level."
+          />
           <div class="button">
-            <PillLabel
-              textColor="#fff"
-              backgroundColor="#181818"
-              title="CEO at Company"
-            />
+            <PillLabel title="CEO at Company" />
           </div>
-          <p class="normal-size">Maya Elizabeth</p>
-        </figure>
-        <p class="small-size">
-          Leverage agile frameworks to provide a robust synopsis for high level
-          overviews.
-        </p>
-        <SocialsIcon />
+        </div>
       </li>
-
       <li>
-        <figure class="card-heading">
-          <img src="../images/teamfive.jpg" alt="" />
+        <div class="card-heading">
+          <Card
+            title="Ryan Jackson"
+            imgPath="../images/teamfive.jpg"
+            body="Leverage agile frameworks to provide a robust synopsis for high level."
+          />
           <div class="button">
-            <PillLabel
-              textColor="#fff"
-              backgroundColor="#181818"
-              title="Manager"
-            />
+            <PillLabel title="Manager" />
           </div>
-          <p class="normal-size">Ryan Jackson</p>
-        </figure>
-        <p class="small-size">
-          Leverage agile frameworks to provide a robust synopsis for high level
-          overviews.
-        </p>
-        <SocialsIcon />
+        </div>
       </li>
-
       <li>
-        <figure class="card-heading">
-          <img src="../images/teamsix.jpg" alt="" />
+        <div class="card-heading">
+          <Card
+            title="Lilly Victoria"
+            imgPath="../images/teamsix.jpg"
+            body="Leverage agile frameworks to provide a robust synopsis for high level."
+          />
           <div class="button">
-            <PillLabel
-              textColor="#fff"
-              backgroundColor="#181818"
-              title="CEO at Company"
-            />
+            <PillLabel title="CEO at Company" />
           </div>
-          <p class="normal-size">Lilly Victoria</p>
-        </figure>
-        <p class="small-size">
-          Leverage agile frameworks to provide a robust synopsis for high level
-          overviews.
-        </p>
-        <SocialsIcon />
+        </div>
       </li>
     </ul>
   </section>
@@ -108,13 +90,13 @@ import PillLabel from "../components/PillLabel.astro";
     .card-heading {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: rem;
       position: relative;
     }
 
     .button {
       position: absolute;
-      bottom: 6rem;
+      bottom: 10rem;
       right: 0;
     }
 

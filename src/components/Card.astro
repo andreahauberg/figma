@@ -1,0 +1,26 @@
+---
+import SocialsIcon from "../components/SocialsIcon.astro";
+const { title, body, imgPath } = Astro.props;
+---
+
+<figure class="card-heading">
+  <img src={imgPath} alt="" />
+  <p class="normal-size">{title}</p>
+</figure>
+<p class="small-size">
+  {body}
+</p>
+<SocialsIcon />
+
+<style>
+  figure {
+    .normal-size {
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    img {
+      border-radius: 1.75rem;
+    }
+  }
+</style>

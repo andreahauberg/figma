@@ -1,13 +1,8 @@
 ---
-const { title, textColor, backgroundColor } = Astro.props;
+const { title } = Astro.props;
 ---
 
-<div
-  style={{
-    color: textColor,
-    background: backgroundColor,
-  }}
->
+<div>
   {title}
 </div>
 
@@ -21,7 +16,8 @@ const { title, textColor, backgroundColor } = Astro.props;
     gap: 0.625rem;
     border-radius: var(--heading-small-radius);
     background: var(--primary01);
-    color: #181818;
+    color: var(--primary03);
+    cursor: pointer;
 
     font-family: cabin;
     font-size: var(--paragraph-text);
@@ -29,5 +25,9 @@ const { title, textColor, backgroundColor } = Astro.props;
     font-weight: var(--normal);
     line-height: var(--default-line-height);
     letter-spacing: 0.145rem;
+  }
+  div:hover {
+    background-color: var(--primary03);
+    color: var(--secondary02);
   }
 </style>
