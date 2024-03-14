@@ -17,8 +17,8 @@
     --placeholder:#1b1b1be8;
     --paragraph-color:#595566;
     /* text */
-    --heading01: clamp(1.5rem, 2.3vw, 2.5rem);
-    --heading02: clamp(1.4rem, 2.5vw, 2.3125rem);
+    --heading01: clamp(1.5rem, 2.5vw, 2.5rem);
+    --heading02: clamp(1.4rem, 2.3vw, 2.3125rem);
     --heading03: clamp(1.2rem, 2vw, 2rem);
     --heading04: clamp(1.8rem, 3vw, 3.1rem);
     --heading05: clamp(1.1rem, 1.7vw, 1.475rem);

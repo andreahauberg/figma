@@ -43,7 +43,7 @@ import BetterConsultSection from "../components/BetterConsultSection.astro";
   }
   .head-container {
     grid-column: feature;
-    margin-top: max(-35%, 50% - 80%);
+    margin-top: max(-35%, 40% - 80%);
     width: fit-content;
     height: fit-content;
     display: inline-flex;
@@ -55,7 +55,7 @@ import BetterConsultSection from "../components/BetterConsultSection.astro";
     border-radius: 1.8125rem;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(5.5px);
-    max-width: 50ch;
+    max-width: 60ch;
     p {
       color: var(--primary03);
       font-size: var(--heading01);
@@ -63,15 +63,17 @@ import BetterConsultSection from "../components/BetterConsultSection.astro";
       font-style: normal;
       font-weight: var(--thick);
       line-height: var(--heading-large-line-heigh);
-      max-width: 40ch;
+      max-width: 50ch;
     }
   }
 
-  @media screen and (max-width: 700px) {
-    img {
+  img {
+    @media (width < 750px) {
       display: none;
     }
-    .head-container {
+  }
+  .head-container {
+    @media (width < 750px) {
       background: none;
       grid-column: feature;
       margin-top: 0;

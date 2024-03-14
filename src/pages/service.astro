@@ -42,7 +42,7 @@ import FaqSection from "../components/FaqSection.astro";
 
   .head-container {
     grid-column: feature;
-    margin-top: max(-35%, 50% - 80%);
+    margin-top: max(-35%, 55% - 80%);
     width: fit-content;
     height: fit-content;
     display: inline-flex;
@@ -60,15 +60,17 @@ import FaqSection from "../components/FaqSection.astro";
       font-family: cabin;
       font-style: normal;
       font-weight: var(--thick);
-      line-height: var(--heading-large-line-heigh);
+      line-height: var(--heading-large-line-height);
     }
   }
 
-  @media screen and (max-width: 700px) {
-    img {
+  img {
+    @media (width < 750px) {
       display: none;
     }
-    .head-container {
+  }
+  .head-container {
+    @media (width < 750px) {
       background: none;
       grid-column: feature;
       margin-top: 0;
