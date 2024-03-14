@@ -5,7 +5,7 @@
     --content-width:50rem;
     --gap: clamp(1rem, 6vw, 3rem);
     --full: minmax(var(--gap), 1fr);
-    --content: min(50rem, 100% - var(--gap) * 2);
+    --content: min(45rem, 100% - var(--gap) * 2);
     --feature: minmax(0, 5rem);
 
     /* color */
@@ -74,6 +74,7 @@ body{
     color: var(--primary03);
     font-family: cabin;
     font-style: normal;
+    margin-bottom: 1rem;
   }
 
   .normal-size{
@@ -83,6 +84,7 @@ body{
     color: var(--primary03);
     font-family: cabin;
     font-style: normal;
+    margin-bottom: 1rem;
   }
 
 .small-size{
