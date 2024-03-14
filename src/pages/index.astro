@@ -12,6 +12,7 @@ import BetterConsultSection from "../components/BetterConsultSection.astro";
 ---
 
 <MainLayout title="About">
+  <h1>About Page</h1>
   <figure class="full"><img src="../images/aboutheading.jpg" alt="" /></figure>
   <div class="head-container">
     <PillHeading title="services" />
@@ -32,6 +33,9 @@ import BetterConsultSection from "../components/BetterConsultSection.astro";
 </MainLayout>
 
 <style>
+  h1 {
+    display: none;
+  }
   .container {
     grid-column: feature;
   }

@@ -10,6 +10,7 @@ import FaqSection from "../components/FaqSection.astro";
 ---
 
 <MainLayout title="Service">
+  <h1>Service Page</h1>
   <figure class="full"><img src="../images/aboutone.jpg" alt="" /></figure>
   <div class="head-container">
     <PillHeading title="service single" />
@@ -28,6 +29,9 @@ import FaqSection from "../components/FaqSection.astro";
 </MainLayout>
 
 <style>
+  h1 {
+    display: none;
+  }
   .container {
     grid-column: feature;
   }
